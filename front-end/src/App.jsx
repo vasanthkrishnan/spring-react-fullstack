@@ -1,35 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import WebLayout from './layout/WebLayout';
+import Add from './pages/Add';
+import Update from './pages/Update';
+import Delete from './pages/Delete';
+import Get from './pages/Get';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <div className='h-screen w-screen overflow-x-hidden overflow-y-auto'>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<WebLayout />}>
+            <Route path='/' element={<Add />} />
+            <Route path='/update' element={<Update />} />
+            <Route path='/get' element={<Get />} />
+            <Route path='/delete' element={<Delete />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </div>
+  );
+};
 
-export default App
+export default App;
