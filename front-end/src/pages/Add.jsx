@@ -31,17 +31,17 @@ export const Add = () => {
 
   return (
     <div className="flex justify-center items-center min-h-screen">
-  <div className="w-[50%] bg-gray-300 border border-gray-200 shadow-md rounded-md p-8 flex justify-center">
-    <form className="space-y-4 w-full ">
-      <input ref={nameRef} className="p-3 border rounded-md border-gray-400 w-[70%]" type="text" placeholder="Name" />
-      <input ref={salaryRef} className="p-3 border rounded-md border-gray-400 w-[70%]" type="text" placeholder="Salary" />
-      <input ref={departmentRef} className="p-3 border rounded-md border-gray-400 w-[70%]" type="text" placeholder="Department" />
-      <input ref={emailRef} className="p-3 border rounded-md border-gray-400 w-[70%]" type="email" placeholder="Email" />
-      <input ref={phoneRef} className="p-3 border rounded-md border-gray-400 w-[70%]" type="tel" placeholder="Phone" />
-      <input onClick={handleFormSubmit} className="p-3 border rounded-md border-gray-400 bg-purple-500 cursor-pointer text-white text-xl hover:bg-purple-700 w-[70%]" type="button" value="Submit" />
-    </form>
-  </div>
-</div>
+      <div className="w-[50%] bg-gray-300 border border-gray-200 shadow-md rounded-md p-8 flex justify-center">
+        <form className="space-y-4 w-full ">
+          <input ref={nameRef} className="p-3 border rounded-md border-gray-400 w-[70%]" type="text" placeholder="Name" />
+          <input ref={salaryRef} className="p-3 border rounded-md border-gray-400 w-[70%]" type="text" placeholder="Salary" />
+          <input ref={departmentRef} className="p-3 border rounded-md border-gray-400 w-[70%]" type="text" placeholder="Department" />
+          <input ref={emailRef} className="p-3 border rounded-md border-gray-400 w-[70%]" type="email" placeholder="Email" />
+         <input ref={phoneRef} className="p-3 border rounded-md border-gray-400 w-[70%]" type="tel" placeholder="Phone" />
+          <input onClick={handleFormSubmit} className="p-3 border rounded-md border-gray-400 bg-purple-500 cursor-pointer text-white text-xl hover:bg-purple-700 w-[70%]" type="button" value="Submit" />
+        </form>
+      </div>
+    </div>
 
   )
 }
